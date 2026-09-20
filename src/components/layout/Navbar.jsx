@@ -52,11 +52,10 @@ export const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
-          ? 'py-3 bg-slate-950/80 dark:bg-slate-950/85 light:bg-white/85 backdrop-blur-xl border-b border-white/10 shadow-xl'
-          : 'py-6 bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled
+        ? 'py-3 bg-slate-950/80 dark:bg-slate-950/85 light:bg-white/85 backdrop-blur-xl border-b border-white/10 shadow-xl'
+        : 'py-6 bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Monogram */}
@@ -95,11 +94,10 @@ export const Navbar = () => {
                   e.preventDefault();
                   scrollTo(item.href);
                 }}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer ${
-                  isActive
-                    ? 'bg-cyan-500/20 text-cyan-400 font-semibold shadow-sm shadow-cyan-500/20'
-                    : 'text-slate-400 dark:text-slate-300 light:text-slate-600 hover:text-white hover:bg-white/5'
-                }`}
+                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer ${isActive
+                  ? 'bg-cyan-500/20 text-cyan-400 font-semibold shadow-sm shadow-cyan-500/20'
+                  : 'text-slate-400 dark:text-slate-300 light:text-slate-600 hover:text-white hover:bg-white/5'
+                  }`}
               >
                 {item.name}
               </a>
@@ -109,7 +107,7 @@ export const Navbar = () => {
 
         {/* Controls: Theme Toggle + Contact CTA */}
         <div className="hidden sm:flex items-center gap-3">
-          <button
+          {/* <button
             onClick={toggleTheme}
             aria-label="Toggle dark/light theme"
             className="p-2.5 rounded-xl border border-white/10 dark:border-white/10 light:border-slate-300 bg-slate-900/60 dark:bg-slate-900/60 light:bg-slate-100 text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-all cursor-pointer"
@@ -119,7 +117,7 @@ export const Navbar = () => {
             ) : (
               <Moon className="w-4 h-4 text-indigo-500" />
             )}
-          </button>
+          </button> */}
 
           <MagneticButton
             onClick={() => scrollTo('#contact')}
@@ -132,13 +130,13 @@ export const Navbar = () => {
 
         {/* Mobile menu triggers */}
         <div className="flex lg:hidden items-center gap-2">
-          <button
+          {/* <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
             className="p-2 rounded-lg bg-slate-900 border border-white/10 text-slate-300 cursor-pointer"
           >
             {theme === 'dark' ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-indigo-400" />}
-          </button>
+          </button> */}
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
